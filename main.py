@@ -1,11 +1,12 @@
 from decimal import Decimal
 
 class Funcionario:
-    def __init__(self, nome, idade, cargo, salario):
+    def __init__(self, nome, idade, cargo, salario, empresa):
         self.nome = nome
         self.idade = idade
         self.cargo = cargo
         self.salario = salario
+        self.empresa = empresa
 
     def setNome(self, nome):
         self.nome = nome
@@ -30,6 +31,9 @@ class Funcionario:
 
     def getSalario(self):
         return format(self.salario, '.2f')
+
+    def getEmpresa(self):
+        return self.empresa
 
     def apresentacao(self):
         return f'Olá! Eu sou o {self.getNome()} e tenho {self.getIdade()} anos.'

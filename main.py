@@ -32,7 +32,7 @@ class Funcionario:
         return format(self.salario, '.2f')
 
     def apresentacao(self):
-        return f'Olá! Eu sou o {self.getNome()} e tenho {self.getIdade()} anos. Trabalho como {self.getCargo()} e ganho R$ {self.getSalario()}.'
+        return f'Olá! Eu sou o {self.getNome()} e tenho {self.getIdade()} anos.'
 
     def decimoTerceiro(self):
         return (self.salario * 2)

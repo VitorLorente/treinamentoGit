@@ -38,7 +38,9 @@ class Funcionario:
         return (self.salario * 2)
 
     def bonus(self, avaliacao):
-        if 1 <= avaliacao < 2:
+        if avaliacao == 0:
+            return format(0, '.2f')
+        elif 1 <= avaliacao < 2:
             return format(self.salario, '.2f')
         elif 2 <= avaliacao < 3:
             return format(self.salario * 2, '.2f')

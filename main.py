@@ -36,13 +36,15 @@ class Funcionario:
         return self.empresa
 
     def apresentacao(self):
-        return f'Olá! Eu sou o {self.getNome()} e tenho {self.getIdade()} anos.'
+        return f'Olá! Eu sou o {self.getNome()}, tenho {self.getIdade()} anos, sou o novo {self.getCargo()} e recebo {self.getSalario()} reais por mês.'
 
     def decimoTerceiro(self):
         return (self.salario * 2)
 
     def bonus(self, avaliacao):
-        if 1 <= avaliacao < 2:
+        if avaliacao == 0:
+            return format(0, '.2f')
+        elif 1 <= avaliacao < 2:
             return format(self.salario, '.2f')
         elif 2 <= avaliacao < 3:
             return format(self.salario * 2, '.2f')

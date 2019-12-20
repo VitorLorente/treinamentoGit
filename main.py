@@ -36,7 +36,7 @@ class Funcionario:
         return self.empresa
 
     def apresentacao(self):
-        return f'Olá! Eu sou o {self.getNome()}, tenho {self.getIdade()} anos, sou o novo {self.getCargo()} e recebo {self.getSalario()} reais por mês.'
+        return f'Olá! Eu sou o {self.getNome()} da {self.getEmpresa()}, tenho {self.getIdade()} anos, sou o novo {self.getCargo()} e recebo {self.getSalario()} reais por mês.'
 
     def decimoTerceiro(self):
         return (self.salario * 2)
